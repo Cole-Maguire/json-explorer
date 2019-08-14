@@ -1,0 +1,50 @@
+[
+    {
+        "descriptionField": "This simple exhibition was completed for the opening of the new Computer Science Building at Auckland University and is the inaugural exhibition to what will become a series of museum-like exhibits throughout the department.  As a permanent exhibition centred around the history of computing it follows the progressive miniaturization of computing memory.",
+        "enclosureField": {
+            "lengthField": "0",
+            "typeField": "image\/jpeg",
+            "urlField": "https:\/\/images.squarespace-cdn.com\/content\/v1\/59accad9b8a79b086c844558\/1505172565135-4LA8USBPEHPYC021C45W\/ke17ZwdGBToddI8pDm48kGPVK--wGoWXJsqwlxbZlQN7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5enfxu_O4VeONvneR-F6W8oeFhFqSrYyNrfPB9Y70_gvQ\/i+03+copy+2.JPG?format=750w"
+        },
+        "guidField": "870b0b3efca8ab271c87c3a8201c7cec",
+        "linkField": "https:\/\/www.pearsonarchitects.co.nz\/exhibition-design#\/memory-line-innovative-learning-environments\/",
+        "pubDateField": "Tue, 02 Apr 2019 10:52:26 +1300",
+        "titleField": "Pearson & Associates feature our Timeline"
+    },
+    {
+        "descriptionField": "Dave Jaggar's career was so successful it lasted only nine years. Having made a fortune helping revolutionise the technology industry, the Kiwi computer engineer's only occupation for the past 14 years has been raising his three children. All the while, though, one goal has remained outstanding - saying cheers to the professor who made it all possible.",
+        "enclosureField": {
+            "lengthField": "0",
+            "typeField": "image\/jpeg",
+            "urlField": "https:\/\/www.nzherald.co.nz\/resizer\/2Fo6FIou9oYFM9ZwJO61xUzq_Pc=\/620x661\/filters:quality(70)\/arc-anglerfish-syd-prod-nzme.s3.amazonaws.com\/public\/OOUPPMQ77NEDVLWFUQIGPFSX54.jpg"
+        },
+        "guidField": "fc332be3fab3adfc1d28aeee7126116f",
+        "linkField": "https:\/\/www.nzherald.co.nz\/nz\/news\/article.cfm?c_id=1&objectid=11295831",
+        "pubDateField": "Sat, 19 Jul 2014 09:34:06 +1300",
+        "titleField": "Techno pioneer thanks teacher who began it all"
+    },
+    {
+        "descriptionField": "The Computer Science department at Auckland University, in association with the Institute of IT Professionals, re-launched the NZ Computer Timeline on Thursday 7 November. The Science Faculty is undergoing a major building programme and the department took the opportunity to redesign the Timeline.",
+        "enclosureField": {
+            "lengthField": "0",
+            "typeField": "image\/jpeg",
+            "urlField": "https:\/\/d3tq6tj0ymyeum.cloudfront.net\/sites\/default\/files\/styles\/article_featured_image\/public\/story_imgs\/photo%202.JPG?itok=EeHXDlwa"
+        },
+        "guidField": "3adfc1d28aeeefc332be3fab7116f126",
+        "linkField": "https:\/\/www.nbr.co.nz\/article\/computer-history-display-auckland-university-148403",
+        "pubDateField": "Sat, 9 Nov 2013 05:31:16 +1300",
+        "titleField": "Computer History On Display At Auckland University"
+    },
+    {
+        "descriptionField": "On Tuesday, July 16, 2013, a group of almost seventy people attended a CHM SoundByte lunchtime lecture entitled The Totalisator – An Algorithm That Led to an Industry delivered by Prof Bob Doran. Bob Doran is a computing veteran with a Silicon Valley stint as Principal Computer Architect at Amdahl Corporation from 1976 to 1982; he is an educator who taught The City University London and Massey University in New Zealand. In the 1980s and 1990s, he was the Head of Department and Professor of Computer Science at the University of Auckland, New Zealand. Like many people in the field, Bob has been fascinated by its history and in recent years his curiosity has shifted towards the deeply antipodean story of totalisators.",
+        "enclosureField": {
+            "lengthField": "0",
+            "typeField": "image\/jpeg",
+            "urlField": "https:\/\/images.computerhistory.org\/blog-media\/RBM-GrandOverview_sm.jpg"
+        },
+        "guidField": "6aefa1d28aeeefc332bc3fab7116f126",
+        "linkField": "https:\/\/www.computerhistory.org\/atchm\/racetrack-betting-mechanized\/",
+        "pubDateField": "Wed, 31 Jul 2013 09:15:05 +1300",
+        "titleField": "Racetrack Betting Mechanized At Computer History Museum"
+    }
+]

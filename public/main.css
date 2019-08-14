@@ -1,0 +1,9 @@
+div.resultHeader {
+  margin-left: 20px;
+  border: 1px solid salmon
+}
+
+span.fieldName {
+  font-weight: bold;
+  margin-left: 10px;
+}
