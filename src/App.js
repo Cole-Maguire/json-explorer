@@ -13,6 +13,48 @@ class ResultContainer extends React.Component {
 }
 
 class ResultHeader extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.getExample = this.getExample.bind(this);
+  }
+  getAllParents(node) {
+    if (node.classList.contains("top-level")) {
+      return []
+    } else {
+      return [...this.getAllParents(node.parentNode), node]
+    }
+  }
+
+  getRandomValue(obj, path) {
+    // Recurses through an object to the right depth, then finds a random value at that level
+
+    if (Array.isArray(obj)) {
+      //Get a random value if we're dealing with an Array of Values
+      const newObj = obj[Math.floor(Math.random() * obj.length)];
+      return this.getRandomValue(newObj, path);
+    } else if (path.length > 0) {
+      //Just get the next value in the tree if we know the key name instead
+      const newObj = obj[path[0].querySelector(".fieldName").textContent];
+      return this.getRandomValue(newObj, path.slice(1, path.length));
+    } else {
+      return obj;
+    }
+  }
+  getExample(e) {
+    const parents = this.getAllParents(e.target.parentNode);
+
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      let obj = JSON.parse(e.target.result);
+      obj = obj.length === undefined ? [obj] : obj;
+      const x = this.getRandomValue(obj, parents);
+      console.log(x)
+    }
+    reader.onload = reader.onload.bind(this)
+    reader.readAsText(document.querySelector("input#file-upload").files[0]);
+  }
   getChild() {
     if (typeof this.props.child === "undefined") {
       return "undefined";
@@ -32,6 +74,7 @@ class ResultHeader extends React.Component {
       <div className={`resultHeader${this.props.className ? ` ${this.props.className}` : ""}`}>
         <span className="fieldName">{this.props.keyName}</span>
         {this.getChild()}
+        <button onClick={this.getExample} type="button" >Show Example</button>
       </div>)
 
   }
