@@ -25,8 +25,6 @@ class ResultHeader extends React.Component {
     }
   }
   render() {
-    console.log(this.props.keyName)
-
     return (
       <div className="resultHeader">
         <span className="fieldName">{this.props.keyName}</span>
