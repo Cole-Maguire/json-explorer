@@ -7,9 +7,7 @@ class ResultContainer extends React.Component {
     if (Object.keys(this.props.parsed).length === 0) {
       return (<div>empty</div>)
     } else {
-      return (<div>
-        <ResultHeader key="" keyName="" child={this.props.parsed} />
-      </div>)
+      return (<ResultHeader key="" keyName="" className="top-level" child={this.props.parsed} />)
     }
   }
 }
@@ -30,7 +28,7 @@ class ResultHeader extends React.Component {
   }
   render() {
     return (
-      <div className="resultHeader">
+      <div className={`resultHeader ${this.props.className}`}>
         <span className="fieldName">{this.props.keyName}</span>
         {this.getChild()}
       </div>)
@@ -70,7 +68,7 @@ class App extends React.Component {
     console.log(obj)
   }
   render() {
-    return (<div>
+    return (<div id="app">
       <FileHandler onFileParsed={this.handleParsed} />
       <ResultContainer parsed={this.state.parsed}></ResultContainer>
     </div>)
