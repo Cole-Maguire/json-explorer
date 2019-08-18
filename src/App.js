@@ -28,7 +28,8 @@ class ResultHeader extends React.Component {
   }
   render() {
     return (
-      <div className={`resultHeader ${this.props.className}`}>
+      //Ternary prevents an "undefined" class showing up when there is no class passed
+      <div className={`resultHeader${this.props.className ? ` ${this.props.className}` : ""}`}>
         <span className="fieldName">{this.props.keyName}</span>
         {this.getChild()}
       </div>)
