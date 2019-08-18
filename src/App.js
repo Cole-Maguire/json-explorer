@@ -16,7 +16,11 @@ class ResultContainer extends React.Component {
 
 class ResultHeader extends React.Component {
   getChild() {
-    if (typeof this.props.child === "object" && this.props.child !== null) {
+    if (typeof this.props.child === "undefined") {
+      return "undefined";
+    } else if (this.props.child === null) {
+      return "null";
+    } else if (typeof this.props.child === "object" && this.props.child !== null) {
       return Object.keys(this.props.child).map(k => {
         return <ResultHeader key={k} keyName={k} child={this.props.child[k]} />
       });
