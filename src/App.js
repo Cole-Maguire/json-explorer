@@ -55,15 +55,50 @@ class ResultHeader extends React.Component {
     reader.onload = reader.onload.bind(this)
     reader.readAsText(document.querySelector("input#file-upload").files[0]);
   }
+
+
   getChild() {
+    function isMalformedArray(obj) {
+      // I'm aware of Array.isArray() obviously, 
+      // but for whatever reason that returns false for arrays that have been munged by React.
+      // My guess is it's because it stores the keys [0,1,2...n] as strings for some godforsaken reason
+      // I can't be bothered plumbing the depths to discover where this happens, so here we are.
+
+      const keys = Object.keys(obj).map(k => Number(k));
+      // An empty object will show as an array if we don't check for it
+      return keys.length !== 0 && keys.every((key, index) => key === index);
+    }
+
     if (typeof this.props.child === "undefined") {
       return "undefined";
     } else if (this.props.child === null) {
       return "null";
     } else if (typeof this.props.child === "object" && this.props.child !== null) {
-      return Object.keys(this.props.child).map(k => {
-        return <ResultHeader key={k} keyName={k} child={this.props.child[k]} />
-      });
+
+      if (isMalformedArray(this.props.child)) {
+        const arr = Object.values(this.props.child)
+          .map(item => {
+            // Undefined and nulls don't show unless converted to strings
+            if (typeof item === "undefined") { return "undefined" }
+            else if (item === null) { return "null" }
+            else { return item }
+          })
+        const counter = arr.reduce((accum, val) => {
+          if (!(val in accum)) accum[val] = 0
+          accum[val] += 1
+          return accum
+        }, {});
+        
+        const counterEnglish = Object.entries(counter).map(([key, val]) => val > 1 ? `${val}x ${key}s` : `${val}x ${key}`)
+        return `[${arr.length} entries: ${counterEnglish.join(", ")}]`
+
+      } else {
+        //Standard object
+        return Object.keys(this.props.child).map(k => {
+          return <ResultHeader key={k} keyName={k} child={this.props.child[k]} />
+        });
+      }
+
     } else {
       return this.props.child;
     }
